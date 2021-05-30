@@ -9,6 +9,7 @@ import { ClientComponent } from './modules/client/client.component';
 import { WarehouseComponent } from './modules/warehouse/warehouse.component';
 import { LayoutsComponent } from './layouts/layouts.component';
 import { HeaderComponent } from './layouts/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './layouts/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

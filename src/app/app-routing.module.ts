@@ -5,14 +5,20 @@ import { ClientComponent } from './modules/client/client.component';
 
 const routes: Routes = [
 
-  { path: "", component: LayoutsComponent },
+  { 
+    path: "", 
+    component: LayoutsComponent,
+    children: [
+      {
+        path: "Credit",
+        loadChildren: () => import("./modules/credit/credit.module").then((m) => m.CreditModule)
+      }
+    ]
+  
+  },
   {
     path: "client",
     component: ClientComponent
-  },
-  {
-    path: "credit",
-    loadChildren: () => import("./modules/credit/credit.module").then((m) => m.CreditModule)
   }
 
 ];
